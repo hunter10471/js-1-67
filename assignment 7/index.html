@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="style.css">
+</head><center>
+<body>
+   <a href="" id="a1" onclick="alert()">hi</a>
+<div><div>
+   <img src="download.jfif" alt="" onclick="alert('thank you')">
+</div>
+<div>
+    <img src="download (1).jfif" alt="" onclick="alert('thank you')">
+</div>
+<script>function deleteRow(){
+    document.getElementById('courses').deleteRow(0);
+ }</script>
+<table id ="courses">
+    <tr>
+        <th>name</th>
+        <td>rafay</td>
+        <td>class 5</td>
+    </tr>
+    <tr>
+    <th>address</th>
+    <td>malir</td>
+    <td>karachi</td>
+    
+    </tr>
+    
+    </table>
+    <button onclick="deleteRow()">delete</button>
+
+
+<img src="download.jfif" alt="" onmousemove="this.src='popp.jfif'" onmouseout="this.src='download.jfif'" >
+
+<script> var c = 0;
+    function inc() {
+        c += 1;
+        document.getElementById("clicks").innerHTML = c;
+}</script>
+    <h1>counter</h1>
+    <h1 id="clicks">0</h1>
+    <button type="button" onclick="inc()">Click me</button>
+
+
+    <script src="app.js"></script>
+
+<img src="" alt="">
+<script>
+    function sub(){
+      var a,b;
+  a = document.getElementById("naam").value
+  b = document.getElementById("number").value
+      document.write("Number is"+" "+b+"\n")
+      document.write("Name is"+" "+a)
+  
+    }
+  </script>
+  
+
+<table>
+<tr ><th>Name</th>
+<th>Number</th></tr>
+<tr><td ><input type="text" id="naam"></textarea>
+</td>
+<td ><input type="text" id="number"></td></tr>
+<button onclick="sub()">Submit</button>
+</table>
+
+<script>
+    function expandlop(){
+        var a = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minima eaque natus, provident ipsa suscipit cupiditate, nemo tempora quia nostrum debitis labore impedit itaque facere expedita vel ab officiis sit."    
+        document.getElementById("lop").innerHTML = a }
+        </script>
+<div>
+    <p id="lop">Lorem ipsum dolor sit amet consectetur, <a href="javascript:void(0);" onclick="expandlop()"><em>Click here.</em></a> </p>
+</div>
+
+<div class="form-popup">
+<form id="myForm">
+ Name:<input type="text" name="name" id="name"><br><br>
+class:<input type="text" name="class" id="class"><br><br>
+address:<input type="text" name="address" id="address"><br><br>
+</form>
+</div>
+<table id ="courses2">
+    <tr>
+        <th>name</th>
+        <th>class</th>
+        <th>address</th>
+
+    </tr>
+    <tr>
+    <td>rafay</td>
+    <td>5</td>
+    <td>karachi</td>
+    <td ><button id="ed1" onclick="openForm()">edit</button></td>
+    <td><button id="del1" onclick="deleterow2()">delete</button></td>
+
+    
+    </tr>
+
+    
+    </table>
+    <script>
+    var table = document.getElementById('courses2');
+                
+    for(var i = 1; i < table.rows.length; i++)
+    {
+        table.rows[i].onclick = function()
+        {
+             //rIndex = this.rowIndex;
+             document.getElementById("name").value = this.cells[0].innerHTML;
+             document.getElementById("class").value = this.cells[1].innerHTML;
+             document.getElementById("address").value = this.cells[2].innerHTML;
+        };
+    }
+    function deleterow2(){
+    document.getElementById('courses2').deleteRow(1);
+
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+</script>
+
+
+
+</center>
+</body>
+</html>
